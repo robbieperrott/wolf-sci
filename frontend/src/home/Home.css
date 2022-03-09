@@ -1,0 +1,43 @@
+.Home {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('../assets/background.png');
+  background-size: cover;
+}
+
+.center {
+  padding: 48px 144px;
+  border: 20px solid #030852;
+  border-radius: 5px;
+  background-color: white;
+}
+
+h2, h3, p {
+  color: #030852
+}
+
+h1 {
+  color: #ffa39e;
+}
+
+.special {
+  font-family: 'Abril Fatface';
+  font-size: 72px;
+}
+
+.special:hover {
+  background: url('../assets/home_link.png');
+  background-size: cover;
+  color: #030852;
+}
+
+
+
+
+
+
+

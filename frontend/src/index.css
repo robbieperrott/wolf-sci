@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import "antd/dist/antd.css";
+
+/*
+Geek blue
+1 #f0f5ff
+2 #d6e4ff
+3 #85a5ff
+4 #2f54eb
+5 #10239e
+6 #030852
+
+Dust red
+1 #fff1f0
+2 #ffccc7
+3 #ff7875
+4 #ff4d4f
+5 #cf1322
+6 #820014
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

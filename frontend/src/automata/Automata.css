@@ -1,0 +1,23 @@
+.ant-layout-header {
+  background-color: #030852;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.ant-layout-header h1 {
+  color: white;
+}
+
+.ant-layout-content {
+  height: calc(100vh - 64px);
+  padding: 0;
+  display: flex;
+}
+
+.outlet-content {
+  width: calc(100vw - 200px);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
