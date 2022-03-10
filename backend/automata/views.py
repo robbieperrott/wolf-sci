@@ -9,7 +9,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework import status
 
 
-def MakeBinaryPlot(request):
+def make_binary_plot(request):
   rule = int(request.GET.get('rule'))
   steps = int(request.GET.get('steps'))
   binary_plot = generate_binary_plot(rule, steps)
@@ -17,7 +17,7 @@ def MakeBinaryPlot(request):
   return HttpResponse([binary_plot])
 
 @csrf_exempt
-def CreateCellularAutomaton(request):
+def create_cellular_automaton(request):
   data = json.loads(request.body)
 
   rule = data['rule']
@@ -34,14 +34,14 @@ def CreateCellularAutomaton(request):
 
   return HttpResponse('Successfully created a cellular automaton')
 
-def GetAllCellularAutomata(request):
+def get_all_cellular_automata(request):
   c = CellularAutomaton.objects.all()
   serializer = CellularAutomatonSerializer(c, many=True)
   json = JSONRenderer().render(serializer.data)
   return HttpResponse(json)
 
 @csrf_exempt
-def DeleteCellularAutomaton(request, automata_id):
+def delete_cellular_automaton(request, automata_id):
   try:
     automaton = CellularAutomaton.objects.get(id=automata_id)
   except CellularAutomaton.DoesNotExist:

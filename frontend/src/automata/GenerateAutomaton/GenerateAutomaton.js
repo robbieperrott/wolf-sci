@@ -58,6 +58,10 @@ export function GenerateAutomaton() {
     axios
       .post('http://localhost:8000/automata/create_cellular_automaton', postParams)
       .then(() => {
+        notification['success']({
+          message: 'Success',
+          description: "Saved new automaton to 'My Automata'"
+        });
         reset();
       })
       .catch(() => {
@@ -122,8 +126,12 @@ export function GenerateAutomaton() {
         { stage === 'display' && (
           <div>
             <Card className='display-card' actions={[
-              <SaveOutlined key='save' onClick={saveCellularAutomaton} style={{ fontSize: '140%'}} />,
-              <CloseCircleOutlined key='back' onClick={reset} style={{ fontSize: '140%'}} />,
+              <Tooltip title="Save to 'My Automata'">
+                <SaveOutlined key='save' onClick={saveCellularAutomaton} style={{ fontSize: '140%'}} />
+              </Tooltip>,
+              <Tooltip title="Close">
+                <CloseCircleOutlined key='back' onClick={reset} style={{ fontSize: '140%'}} />
+              </Tooltip>,
             ]}>
               <Plot 
                 data={[{
