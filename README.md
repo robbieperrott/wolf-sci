@@ -9,3 +9,5 @@ I have dockerised the entire application. To run it, install docker, `cd` to the
 `docker-compose up`
 
 This will build a postgres database, the Django backend, and the React front end. Note that this may take some time. You may also have to increase the memory in your docker settings, which can be in the Docker.app Settings > Resources.
+
+The front end will be available at `localhost:3000` and the backend api will be available at `localhost:8000`.
