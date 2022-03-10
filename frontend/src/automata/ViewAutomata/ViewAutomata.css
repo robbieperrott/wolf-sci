@@ -16,3 +16,12 @@
 .ant-modal {
   text-align: center;
 }
+
+.ant-modal p {
+  padding-top: 8px;
+  color: grey;
+}
+
+.modal-plot {
+  padding-top: 12px;
+}

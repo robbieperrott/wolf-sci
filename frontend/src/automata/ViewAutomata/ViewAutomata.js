@@ -60,12 +60,17 @@ export function ViewAutomata() {
     setLoading(false);
   }
 
+  const formatDateTime = (dateTimeString) => {
+    const date = new Date(dateTimeString);
+    return date.toLocaleString().replace(',', ' at');
+  }
+
   const openAutomataModal = (a) => {
     Modal.confirm({
       icon: null,
       title: `Rule ${a.rule} (${a.steps} steps)`,
-      content: 
-        <div>
+      content:
+        <div className='modal-plot'>
           <Plot 
             data={[{
               z: a.binary_plot,
@@ -75,6 +80,7 @@ export function ViewAutomata() {
             }]}
             layout={modalLayout}
           />
+          <p>Created on {formatDateTime(a.date_time)}</p>
         </div>,
       maskClosable: false,
       // Override ant modal cancel with delete functionality

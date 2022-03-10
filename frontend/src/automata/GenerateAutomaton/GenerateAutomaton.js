@@ -2,7 +2,7 @@ import './GenerateAutomaton.css';
 import { useState } from 'react';
 import axios from 'axios';
 import Plot from 'react-plotly.js';
-import { Button, Spin, Card, Space, Row, Col, notification, InputNumber } from 'antd';
+import { Button, Spin, Card, Space, Row, Col, notification, InputNumber, Tooltip } from 'antd';
 import { SaveOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import { colorscale, plotLayout } from '../plotly_utils';
 
